@@ -1,5 +1,5 @@
 
-function editdata()
+/*function editdata()
 {
     var m=document.getElementById("search_data");
     var input = m.getElementById("myInput");\
@@ -21,13 +21,22 @@ function editdata()
             }
        }
     }   
+}*/
+function edit_data(){
+  
 }
-function hide()
-{
-        $('td:nth-child(4)').hide();
-        $('td:nth-child(3)').hide();
+
+
+
+
+ function delete_data() {
+    document.getElementById("myTable").deleteRow(0);
 }
- function inputdata() {
+
+
+
+
+function inputdata() {
         const row=document.createElement('tr');
         let col1=document.createElement('td');
         let col2=document.createElement('td');
