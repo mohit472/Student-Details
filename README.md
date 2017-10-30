@@ -1,0 +1,2 @@
+# Student-Details
+Design a student details management portal for admin with following feature:    - Display the list of students(Name, Rollno, Passout year, Stream)   - Add new student details (for that partiular session, not persistent i.e., once the page refreshes it shows initial details again)   - Edit Student details  (for that partiular session, not persistent i.e., once the page refreshes it shows initial details again)   - Delete one student details
