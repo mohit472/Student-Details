@@ -1,0 +1,76 @@
+<html>
+        <head>
+            <meta charset="UTF-8">
+            <link rel="stylesheet" href="css/bootstrap.min.css">
+            <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+            <link rel = "stylesheet" type="text/css" href = "css/style.css" />
+            <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+            <title>
+                 Student Details
+            </title>
+            <script src="main.js"></script>
+         </head>
+         <body>
+         <br>
+         <div class="container">
+                <div class="page-header">
+                  <center>
+                        <h1 class="text-primary">STUDENT DETAILS</h1>
+                    </center>      
+                </div>
+                <center>
+                        <div class="row">
+                                <button type="button" class="btn btn-primary btn-lg " data-toggle="collapse" data-target="#input">
+                                    Enter Student Data
+                                </button>
+                                <button class="btn btn-warning btn-lg" type="button" data-toggle="collapse" data-target="#edit">
+                                        Edit Student Detail
+                                    </button>
+                                <button class="btn btn-outline-info btn-lg" type="button" data-toggle="collapse" data-target="#delete">
+                                    Delete Student Data
+                                </button>  
+                            </div>
+                            <div class="collapse" id="input">
+                                    <br>
+                                    <form class="form-inline">
+                                        <input placeholder="Student name" class="form-control" id="name"/>
+                                        <input placeholder="Roll Number" class="form-control" id="roll"/>
+                                        <input placeholder="Passout Year" class="form-control" id="year" />
+                                        <input placeholder="Stream" class="form-control" id="stream"/>
+                                        <submit type="submit" class="btn btn-warning" onclick = "inputdata() ">Insert</submit>
+                                    </form>
+                                </div>
+                
+                                <div class="collapse" id="edit">
+                                    <br>
+                                    <form class="form-inline">
+                                        <input placeholder="Student name" class="form-control" />
+                                        <input placeholder="Roll Number" class="form-control" />
+                                        <input placeholder="Passout Year" class="form-control" />
+                                        <input placeholder="Stream" class="form-control"/>
+                                        <submit type="submit" class="btn btn-warning" onclick = "editdata()">Edit</submit>
+                                    </form>
+                                </div>            
+                </center>
+            </br>
+                        <div>
+                            <table class = "table" id="tableid">
+                                    <tr>
+                                        <td>Student Roll</td>
+                                        <td>Student Name</td>
+                                        <td>Year</td>
+                                        <td>Stream</td>
+                                    </tr>
+                            </table>
+                        </div>
+                    </body>
+</html>
