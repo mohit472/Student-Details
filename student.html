@@ -46,7 +46,7 @@
                                         <input placeholder="Roll Number" class="form-control" id="roll"/>
                                         <input placeholder="Passout Year" class="form-control" id="year" />
                                         <input placeholder="Stream" class="form-control" id="stream"/>
-                                        <submit type="submit" class="btn btn-warning" onclick = "inputdata() ">Insert</submit>
+                                        <submit type="submit" class="btn btn-warning" onclick = "input_data() ">Insert</submit>
                                     </form>
                                 </div>
                 
@@ -57,19 +57,31 @@
                                         <input placeholder="Roll Number" class="form-control" />
                                         <input placeholder="Passout Year" class="form-control" />
                                         <input placeholder="Stream" class="form-control"/>
-                                        <submit type="submit" class="btn btn-warning" onclick = "editdata()">Edit</submit>
+                                        <submit type="submit" class="btn btn-warning" onclick = "edit_data()">Edit</submit>
                                     </form>
-                                </div>            
+                                </div> 
+                                
+                                <div class="collapse" id="delete">
+                                        <br>
+                                        <form class="form-inline">
+                                            <submit type="submit" class="btn btn-warning" onclick = "delete_data() ">Insert</submit>
+                                        </form>
+                                    </div>
                 </center>
             </br>
                         <div>
-                            <table class = "table" id="tableid">
-                                    <tr>
-                                        <td>Student Roll</td>
-                                        <td>Student Name</td>
-                                        <td>Year</td>
-                                        <td>Stream</td>
-                                    </tr>
+                            <table class = "table">
+                                    <thead>
+                                            <tr>
+                                              <th>Student Roll</th>
+                                              <th>Student Name</th>
+                                              <th>Year</th>
+                                              <th>Stream</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody  id="tableid">
+                                            
+                                          </tbody>
                             </table>
                         </div>
                     </body>
