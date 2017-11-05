@@ -36,7 +36,7 @@ function edit_data(){
 
 
 
-function inputdata() {
+function input_data() {
         const row=document.createElement('tr');
         let col1=document.createElement('td');
         let col2=document.createElement('td');
@@ -46,12 +46,17 @@ function inputdata() {
              row.appendChild(col2);
              row.appendChild(col3);
              row.appendChild(col4);
+          
              col1.innerHTML=document.getElementById('roll').value;
              col2.innerHTML=document.getElementById('name').value;
              col3.innerHTML=document.getElementById('year').value;
              col4.innerHTML=document.getElementById('stream').value;
         const table=document.getElementById('tableid');
              table.appendChild(row);
-        
+             $("#table tr").click(function () {
+               $(this).addClass('selected').siblings().removeClass('selected');
+               var value = $(this).find('td:first').html();
+               alert(value);
+             });
 
  }

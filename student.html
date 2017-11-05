@@ -1,11 +1,6 @@
 <html>
         <head>
             <meta charset="UTF-8">
-            <link rel="stylesheet" href="css/bootstrap.min.css">
-            <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-            <link rel = "stylesheet" type="text/css" href = "css/style.css" />
             <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -29,6 +24,7 @@
                 </div>
                 <center>
                         <div class="row">
+                            <div class="col-md-12">
                                 <button type="button" class="btn btn-primary btn-lg " data-toggle="collapse" data-target="#input">
                                     Enter Student Data
                                 </button>
@@ -39,7 +35,8 @@
                                     Delete Student Data
                                 </button>  
                             </div>
-                            <div class="collapse" id="input">
+                        </div>
+                        <div class="collapse" id="input">
                                     <br>
                                     <form class="form-inline">
                                         <input placeholder="Student name" class="form-control" id="name"/>
@@ -48,9 +45,9 @@
                                         <input placeholder="Stream" class="form-control" id="stream"/>
                                         <submit type="submit" class="btn btn-warning" onclick = "input_data() ">Insert</submit>
                                     </form>
-                                </div>
+                        </div>
                 
-                                <div class="collapse" id="edit">
+                        <div class="collapse" id="edit">
                                     <br>
                                     <form class="form-inline">
                                         <input placeholder="Student name" class="form-control" />
@@ -59,18 +56,19 @@
                                         <input placeholder="Stream" class="form-control"/>
                                         <submit type="submit" class="btn btn-warning" onclick = "edit_data()">Edit</submit>
                                     </form>
-                                </div> 
+                        </div> 
                                 
-                                <div class="collapse" id="delete">
+                        <div class="collapse" id="delete">
                                         <br>
                                         <form class="form-inline">
                                             <submit type="submit" class="btn btn-warning" onclick = "delete_data() ">Insert</submit>
                                         </form>
-                                    </div>
-                </center>
+                        </div>
+                        </center>
             </br>
-                        <div>
-                            <table class = "table">
+                        <div class="row">
+                            <div class="col-md-12">
+                              <table class = "table">
                                     <thead>
                                             <tr>
                                               <th>Student Roll</th>
@@ -82,7 +80,9 @@
                                           <tbody  id="tableid">
                                             
                                           </tbody>
-                            </table>
-                        </div>
-                    </body>
+                              </table>
+                            </div>
+                        </div>  
+                   
+         </body>
 </html>
