@@ -1,62 +1,63 @@
-
-/*function editdata()
-{
-    var m=document.getElementById("search_data");
-    var input = m.getElementById("myInput");\
-    var filter = input.value.toUpperCase();
-    var table = document.getElementById("tableid");
-    var tr = table.getElementsByTagName("tr");
-    for (i = 0; i < tr.length; i++) 
-    {
-      var td = tr[i].getElementsByTagName("td")[1];
-      if (td)
-       {
-          if (td.innerHTML.toUpperCase().indexOf(filter) > -1)
-            {
-              tr[i].style.display = "";
-           }
-            else 
-            {
-              tr[i].style.display = "none";
-            }
-       }
-    }   
-}*/
-function edit_data(){
-  
-}
-
-
-
-
- function delete_data() {
-    document.getElementById("myTable").deleteRow(0);
-}
-
-
-
-
 function input_data() {
-        const row=document.createElement('tr');
-        let col1=document.createElement('td');
-        let col2=document.createElement('td');
-        let col3=document.createElement('td');
-        let col4=document.createElement('td');
-             row.appendChild(col1);
-             row.appendChild(col2);
-             row.appendChild(col3);
-             row.appendChild(col4);
-          
-             col1.innerHTML=document.getElementById('roll').value;
-             col2.innerHTML=document.getElementById('name').value;
-             col3.innerHTML=document.getElementById('year').value;
-             col4.innerHTML=document.getElementById('stream').value;
-        const table=document.getElementById('tableid');
-             table.appendChild(row);
-             $("#table tr").click(function () {
-               $(this).addClass('selected').siblings().removeClass('selected');
-               var value = $(this).find('td:first').html();
-               alert(value);
-             });
 
- }
+        const i=1;
+        let rows = "";
+        const name = document.getElementById("name").value;
+        const roll = document.getElementById("rollno").value;
+        const year = document.getElementById("year").value;
+        const stream = document.getElementById("stream").value;
+
+        if(name == null || /[^a-zA-Z]/.test(name))
+                alert("Enter correct Name");
+        else if( roll == null || /[^0-9]/.test(roll))
+                alert("Enter correct roll number");
+        else if(year == null || /[^0-9]/.test(year))
+                alert("Enter correct Year");
+        else if( stream == null || /[^a-zA-Z]/.test(stream))
+                alert("Enter correct Stream");
+        else if(name!= null && name.trim() !== '' && roll!= null && roll.trim() !== '' && year!= null && year.trim() !== '' && stream!= null && stream.trim() !== '')
+        {
+            rows += `<tr><td>${roll}</td><td>${name}</td><td>${year}</td><td>${stream}</td></tr>`;
+            $(rows).appendTo("#tableid");
+        }
+        else 
+        {
+            alert("Donot leave any field empty");
+            alert("Enter Details of Student");
+        }
+
+        document.getElementById("rollno").value = "";
+        document.getElementById("name").value = "";
+        document.getElementById("year").value = "";
+        document.getElementById("stream").value = "";
+    }
+    function delete_data() {
+        const i = prompt("enter the row number which you want to delete ");
+        let t = document.getElementsByTagName('tr');
+        if(i<1 || i>t.length+1)
+        alert('No such row no. exists');
+        else
+        document.getElementById("tableid").deleteRow(i-1);
+    }
+    function getrow()
+    {
+        return parseInt(prompt("Which row you want to edit"));
+    }
+    function edit_data(){
+        var i=parseInt(prompt("Which row you want to edit"));
+        let A = document.getElementsByTagName('tr');
+        if(i<1 || i>A.length+1)
+            alert('No such row no. exists');
+        else
+        {
+            const name=document.getElementById("name1").value;
+            const roll=document.getElementById("rollno1").value;
+            const year=document.getElementById("year1").value;
+            const stream=document.getElementById("stream1").value;
+            const e=document.getElementById("tableid").rows[i+1].cells;
+            e[0].innerHTML=roll;
+            e[1].innerHTML=name ;
+            e[2].innerHTML=year;
+            e[3].innerHTML=stream;
+        }
+       }
