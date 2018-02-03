@@ -39,10 +39,7 @@ function input_data() {
         else
         document.getElementById("tableid").deleteRow(i-1);
     }
-    function getrow()
-    {
-        return parseInt(prompt("Which row you want to edit"));
-    }
+
     function edit_data(){
         var i=parseInt(prompt("Which row you want to edit"));
         let A = document.getElementsByTagName('tr');
