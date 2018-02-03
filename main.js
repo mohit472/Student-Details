@@ -1,4 +1,4 @@
-function input_data() {
+input_data=()=> {
 
         const i=1;
         let rows = "";
@@ -31,7 +31,7 @@ function input_data() {
         document.getElementById("year").value = "";
         document.getElementById("stream").value = "";
     }
-    function delete_data() {
+    delete_data=()=> {
         let t=document.getElementById("tableid");
         let n=t.getElementsByClassName("c");
         for(let i=0;i<=n.length;i++)
@@ -45,7 +45,7 @@ function input_data() {
         }
     }
 
-    function edit_data(){
+    edit_data=()=>{
         
        /* var i=parseInt(prompt("Which row you want to edit"));
         let A = document.getElementsByTagName('tr');
